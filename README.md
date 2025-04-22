@@ -39,8 +39,6 @@ Os desafios estão organizados em pastas individuais. Cada pasta contém:
 ## 📜 Desafios Concluídos  
 
 ### 🌟 Projetos Finalizados  
-1. **Nome do Projeto 1** — Breve descrição do que foi feito.  
-2. **Nome do Projeto 2** — Breve descrição do que foi feito.  
 
 *(Atualizarei a lista conforme novos desafios forem concluídos!)*  
 
