@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Four card feature section</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              poppins: ['Poppins', 'sans-serif'],
+            },
+            colors: {
+              red: 'hsl(0, 78%, 62%)',
+              cyan: ' hsl(180, 62%, 55%)',
+              orange: 'hsl(34, 97%, 64%)',
+              blue: 'hsl(212, 86%, 64%)',
+              grey: {
+                500: 'hsl(234, 12%, 34%)',
+                400: 'hsl(212, 6%, 44%)',
+              },
+              white: 'hsl(0, 0%, 100%)',
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="min-h-screen font-poppins bg-[#FAFAFA] py-7">
+    <main class="flex flex-col items-center px-6 py-12 text-center">
+      <div class="session max-w-md">
+        <h1 class="text-grey-400 text-2xl tracking-wide text md:text-2xl">
+          Reliable, efficient delivery
+        </h1>
+        <h2 class="text-grey-500 text-2xl md:text-3xl font-bold mt-2">
+          Powered by Technology
+        </h2>
+        <p class="text-grey-400 text-lg md:text-base mt-4 leading-relaxed">
+          Our Artificial Intelligence powered tools use millions of project data
+          points to ensure that your project is successful
+        </p>
+      </div>
+
+      <section class="grid grid-cols-1 mt-14 gap-8 md:grid-cols-3">
+        <div class="flex justify-center items-center">
+          <div
+            class="bg-white rounded-lg shadow-lg border-t-4 mr-6 border-cyan p-6 gap-8 flex flex-col justify-between max-w-sm"
+          >
+            <!-- Texto -->
+            <div class="text-left">
+              <h3 class="text-grey-500 font-bold text-lg">Supervisor</h3>
+              <p class="text-grey-400 text-sm mt-2">
+                Monitors activity to identify project roadblocks
+              </p>
+            </div>
+
+            <!-- Ícone -->
+            <div class="mt-6 self-end">
+              <img
+                src="./images/icon-supervisor.svg"
+                alt="icon"
+                class="w-10 h-10"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-8 items-center">
+          <div
+            class="md:col-start-2 md:col-end-4 bg-white rounded-lg shadow-lg border-t-4 border-red p-6 gap-8 flex flex-col justify-between h-full max-w-sm mr-6"
+          >
+            <!-- Texto -->
+            <div class="text-left">
+              <h3 class="text-grey-500 font-bold text-lg">Team Builder</h3>
+              <p class="text-grey-400 text-sm mt-2">
+                Scans our talent network to create the optimal
+              </p>
+            </div>
+
+            <!-- Ícone -->
+            <div class="mt-6 self-end">
+              <img
+                src="./images/icon-team-builder.svg"
+                alt="icon"
+                class="w-10 h-10"
+              />
+            </div>
+          </div>
+
+          <div
+            class="md:col-start-2 md:col-end-4 bg-white rounded-lg shadow-lg border-t-4 border-orange mr-6 p-6 gap-8 flex flex-col justify-between h-full max-w-sm"
+          >
+            <!-- Texto -->
+            <div class="text-left">
+              <h3 class="text-grey-500 font-bold text-lg">Karma</h3>
+              <p class="text-grey-400 text-sm mt-2">
+                Regularly evaluates our talent to ensure quality
+              </p>
+            </div>
+
+            <!-- Ícone -->
+            <div class="mt-6 self-end">
+              <img src="./images/icon-karma.svg" alt="icon" class="w-10 h-10" />
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-center items-center">
+          <div
+            class="md:col-start-3 md:col-end-5 bg-white rounded-lg shadow-lg border-t-4 mr-6 border-blue p-6 gap-8 flex flex-col justify-between max-w-sm"
+          >
+            <!-- Texto -->
+            <div class="text-left">
+              <h3 class="text-grey-500 font-bold text-lg">Calculator</h3>
+              <p class="text-grey-400 text-sm mt-2">
+                Uses data from past projects to provide better delivery
+                estimates
+              </p>
+            </div>
+
+            <!-- Ícone -->
+            <div class="mt-6 self-end">
+              <img
+                src="./images/icon-calculator.svg"
+                alt="icon"
+                class="w-10 h-10"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
+<!-- <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </p>
+    </footer> -->
