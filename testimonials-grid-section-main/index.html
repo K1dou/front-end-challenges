@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | [Challenge Name Here]</title>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              barlow: ['"Barlow Semi Condensed"', 'sans-serif'],
+            },
+            fontSize: {
+              base: '13px',
+            },
+            colors: {
+              purple: {
+                50: 'hsl(260, 100%, 95%)',
+                300: 'hsl(264, 82%, 80%)',
+                500: 'hsl(263, 55%, 52%)',
+              },
+              white: 'hsl(0, 0%, 100%)',
+              grey: {
+                100: 'hsl(214, 17%, 92%)',
+                200: 'hsl(0, 0%, 81%)',
+                400: 'hsl(224, 10%, 45%)',
+                500: 'hsl(217, 19%, 35%)',
+              },
+              darkblue: 'hsl(219, 29%, 14%)',
+              black: 'hsl(0, 0%, 7%)',
+            },
+          },
+        },
+      };
+      // <!-- mt-16 -->
+    </script>
+  </head>
+  <body class="min-h-screen font-barlow bg-grey-100">
+    <main
+      class="grid grid-cols-1 gap-10 md:grid-cols-4 md:auto-rows-auto md:mx-60"
+    >
+      <div
+        class="md:max-w-none md:mx-0 md:col-start-1 md:col-end-3 max-w-[360px] mx-auto p-6 rounded-lg bg-purple-500 text-white space-y-4 mt-16"
+      >
+        <div class="user flex items-start gap-4">
+          <img
+            class="rounded-full h-9 w-9 border border-purple-300"
+            src="images/image-daniel.jpg"
+            alt=""
+          />
+
+          <div>
+            <p class="tracking-wide text-base font-semibold">Daniel Clifford</p>
+            <p class="text-base font-light">Verified Graduate</p>
+          </div>
+        </div>
+
+        <p class="font-bold text-xl tracking-wide">
+          I received a job offer mid-course, and the subjects I learned were
+          current, if not more so, in the company I joined. I honestly feel I
+          got every penny’s worth.
+        </p>
+
+        <p class="text-sm tracking-wide">
+          “I was an EMT for many years before I joined the bootcamp. I’ve been
+          looking to make a transition and have heard some people who had an
+          amazing experience here. I signed up for the free intro course and
+          found it incredibly fun! I enrolled shortly thereafter. The next 12
+          weeks was the best - and most grueling - time of my life. Since
+          completing the course, I’ve successfully switched careers, working as
+          a Software Engineer at a VR startup.”
+        </p>
+      </div>
+
+      <div
+        class="md:max-w-none md:mx-0 md:col-start-3 md:col-end-4 md:mt-16 md:row-start-1 w-full max-w-[360px] mx-auto p-6 rounded-lg bg-grey-500 text-white space-y-4"
+      >
+        <div class="user flex items-start gap-4">
+          <img
+            class="rounded-full h-9 w-9"
+            src="images/image-jonathan.jpg"
+            alt=""
+          />
+
+          <div>
+            <p class="tracking-wide text-base font-semibold">
+              Jonathan Walters
+            </p>
+            <p class="text-base font-light">Verified Graduate</p>
+          </div>
+        </div>
+
+        <p class="font-bold text-xl tracking-wide">
+          The team was very supportive and kept me motivated
+        </p>
+
+        <p class="text-sm tracking-wide">
+          “I started as a total newbie with virtually no coding skills. I now
+          work as a mobile engineer for a big company. This was one of the best
+          investments I’ve made in myself.”
+        </p>
+      </div>
+
+      <div
+        class="md:col-span-1 md:col-start-1 md:col-end-3 w-full max-w-[360px] mx-auto p-6 rounded-lg bg-white text-gray-600 space-y-4"
+      >
+        <div class="user flex items-start gap-4">
+          <img
+            class="rounded-full h-9 w-9 border border-purple-300"
+            src="images/image-jeanette.jpg"
+            alt=""
+          />
+
+          <div>
+            <p class="tracking-wide text-base font-semibold">Jeanette Harmon</p>
+            <p class="text-base font-light">Verified Graduate</p>
+          </div>
+        </div>
+
+        <p class="font-bold text-xl tracking-wide">
+          An overall wonderful and rewarding experience
+        </p>
+
+        <p class="text-sm tracking-wide">
+          “Thank you for the wonderful experience! I now have a job I really
+          enjoy, and make a good living while doing something I love.”
+        </p>
+      </div>
+
+      <div
+        class="md:col-start-2 md:col-end-4 w-full max-w-[360px] mx-auto p-6 rounded-lg bg-darkblue text-white space-y-4"
+      >
+        <div class="user flex items-start gap-4">
+          <img
+            class="rounded-full h-9 w-9 border border-purple-300"
+            src="images/image-patrick.jpg"
+            alt=""
+          />
+
+          <div>
+            <p class="tracking-wide text-base font-semibold">Patrick Abrams</p>
+            <p class="text-base font-light">Verified Graduate</p>
+          </div>
+        </div>
+
+        <p class="font-bold text-xl tracking-wide">
+          Awesome teaching support from TAs who did the bootcamp themselves.
+          Getting guidance from them and learning from their experiences was
+          easy.
+        </p>
+
+        <p class="text-sm tracking-wide">
+          “The staff seem genuinely concerned about my progress which I find
+          really refreshing. The program gave me the confidence necessary to be
+          able to go out in the world and present myself as a capable junior
+          developer. The standard is above the rest. You will get the personal
+          attention you need from an incredible community of smart and amazing
+          people.”
+        </p>
+      </div>
+
+      <div
+        class="md:col-start-4 md:col-end-5 md:row-start-1 md:max-w-none md:mx-0 md:mt-16 w-full max-w-[360px] mx-auto p-6 rounded-lg bg-white text-gray-600 space-y-4"
+      >
+        <div class="user flex items-start gap-4">
+          <img
+            class="rounded-full h-9 w-9"
+            src="images/image-kira.jpg"
+            alt=""
+          />
+
+          <div>
+            <p class="tracking-wide text-base font-semibold">Kira Whittle</p>
+            <p class="text-base font-light">Verified Graduate</p>
+          </div>
+        </div>
+
+        <p class="font-bold text-xl">
+          Such a life-changing experience. Highly recommended!
+        </p>
+
+        <p class="text-sm tracking-wide">
+          “Before joining the bootcamp, I’ve never written a line of code. I
+          needed some structure from professionals who can help me learn
+          programming step by step. I was encouraged to enroll by a former
+          student of theirs who can only say wonderful things about the program.
+          The entire curriculum and staff did not disappoint. They were very
+          hands-on and I never had to wait long for assistance. The agile team
+          project, in particular, was outstanding. It took my learning to the
+          next level in a way that no tutorial could ever have. In fact, I’ve
+          often referred to it during interviews as an example of my developent
+          experience. It certainly helped me land a job as a full-stack
+          developer after receiving multiple offers. 100% recommend!”
+        </p>
+      </div>
+    </main>
+  </body>
+</html>
+
+<!--   
+    
+     -->
+
+<!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
