@@ -1,0 +1,22 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --color-desaturated-dark-blue: hsl(214, 17%, 51%);
+  --color-grayish-blue: hsl(212, 23%, 69%);
+  --color-light-grayish-blue: hsl(210, 46%, 95%);
+  --font-family-manrope: 'Manrope', sans-serif;
+  --font-size-base: 13px;
+}
+
+@layer base {
+  html {
+    font-family: 'Manrope', sans-serif;
+  }
+  /* h1 {
+      font-size: var(--text-2xl);
+    }
+    h2 {
+      font-size: var(--text-xl);
+    } */
+}
