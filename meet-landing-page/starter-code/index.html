@@ -51,21 +51,169 @@
 
     <title>Frontend Mentor | Meet landing page</title>
   </head>
-  <body class="min-h-screen bg-white">
-    <main
-      class="w-full max-w-screen-md md:max-w-screen-lg lg:max-w-screen-xl mx-auto px-6 md:px-12 lg:px-20"
-    >
-      <nav class="flex items-end justify-center h-20">
-        <img src="./assets/logo.svg" alt="" />
-      </nav>
+  <body class="bg-white font-redhat">
+    <main class="w-full">
+      <section
+        class="min-h-[640px] md:min-h-0 flex flex-col max-w-screen-md md:max-w-screen-lg lg:max-w-screen-xl mx-auto px-6 md:px-12 lg:px-20 md:py-16"
+      >
+        <nav class="flex items-end justify-center h-20">
+          <img src="./assets/logo.svg" alt="" />
+        </nav>
 
-      <section class="grid grid-cols-1">
-        <div></div>
+        <div class="hidden xl:block">
+          <!-- Esquerda -->
+          <img
+            src="./assets/desktop/image-hero-left.png"
+            alt=""
+            class="absolute top-52 left-0"
+          />
 
-        <div></div>
+          <!-- Direita -->
+          <img
+            src="./assets/desktop/image-hero-right.png"
+            alt=""
+            class="absolute top-56 right-0"
+          />
+        </div>
 
-        <div></div>
+        <div class="flex xl:hidden justify-center gap-2 mb-6 mt-16">
+          <img
+            class="h-40 w-52 md:hidden"
+            src="./assets/desktop/image-hero-left.png"
+            alt=""
+          />
+          <picture>
+            <source
+              srcset="./assets/tablet/image-hero.png"
+              media="(min-width: 768px)"
+            />
+            <img
+              class="h-40 w-52 md:h-auto md:w-auto"
+              src="./assets/desktop/image-hero-right.png"
+              alt=""
+            />
+          </picture>
+        </div>
+
+        <div class="text-center mt-10">
+          <h1 class="text-4xl font-extrabold text-slate-900 md:text-4xl">
+            Group Chat <br />
+            for Everyone
+          </h1>
+          <p class="text-slate-600 font-medium mt-6 md:text-2xl md:mt-9">
+            Meet makes it easy to connect with others <br class="md:hidden" />
+            face-to-face <br class="hidden md:block" />
+            virtually and collaborate <br class="md:hidden" />
+            across any device.
+          </p>
+
+          <div
+            class="flex flex-col md:flex-row justify-center items-center gap-4 mt-6 pb-8"
+          >
+            <button
+              class="bg-cyan-600 text-white h-14 w-48 rounded-full font-bold md:text-lg"
+            >
+              Download <span class="text-cyan-300">v1.3</span>
+            </button>
+            <button
+              class="bg-purple-600 text-white w-40 h-14 font-bold rounded-full md:text-lg"
+            >
+              What is it?
+            </button>
+          </div>
+        </div>
       </section>
+
+      <section
+        class="min-h-screen md:min-h-0 flex flex-col items-center max-w-screen-md md:max-w-screen-lg lg:max-w-screen-xl mx-auto px-6 md:px-12 lg:px-20 lg:mt-32"
+      >
+        <div class="items-center mt-20">
+          <!-- CÍRCULO -->
+          <div
+            class="h-12 w-12 rounded-full border border-slate-600 text-slate-600 flex items-center justify-center text-lg font-bold bg-white z-10"
+          >
+            01
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4 mt-16 md:grid-cols-4">
+          <img
+            class="rounded-lg"
+            src="./assets/desktop/image-woman-in-videocall.jpg"
+            alt=""
+          />
+          <img
+            class="rounded-lg"
+            src="./assets/desktop/image-women-videochatting.jpg"
+            alt=""
+          />
+          <img
+            class="rounded-lg"
+            src="./assets/desktop/image-men-in-meeting.jpg"
+            alt=""
+          />
+          <img
+            class="rounded-lg"
+            src="./assets/desktop/image-man-texting.jpg"
+            alt=""
+          />
+        </div>
+
+        <div class="mt-16">
+          <p
+            class="tracking-widest uppercase font-bold text-cyan-600 text-center md:text-lg"
+          >
+            Built for modern use
+          </p>
+          <h1
+            class="text-center text-slate-900 font-extrabold text-4xl pt-3 md:text-4xl"
+          >
+            Smarter meetings,<br class="md:hidden" />
+            all <br class="hidden md:block" />
+            in one place
+          </h1>
+
+          <p
+            class="pt-8 text-slate-600 text-center font-medium text-lg md:text-2xl"
+          >
+            Send messages, share files, show your <br class="md:hidden" />
+            screen, and record your <br class="hidden md:hidden lg:block" />
+            meetings — all in <br class="md:hidden" />
+            one workspace. Control who can join with <br class="md:hidden" />
+            invite-<br class="hidden md:hidden lg:block" />
+            only team access, data encryption,<br class="md:hidden" />
+            and data export.
+          </p>
+        </div>
+      </section>
+
+      <div
+        class="relative mt-20 h-[450px] md:h-[450px] rounded-md overflow-hidden flex items-center justify-center bg-[url('./assets/mobile/image-footer.jpg')] md:bg-[url('./assets/desktop/image-footer.jpg')] bg-no-repeat bg-cover bg-center"
+      >
+        <!-- Overlay escuro -->
+        <div class="absolute inset-0 bg-cyan-600/90"></div>
+
+        <!-- Conteúdo centralizado -->
+        <div
+          class="relative z-10 text-center text-white px-6 flex flex-col items-center justify-center"
+        >
+          <h1 class="text-3xl md:text-4xl font-extrabold mb-4 leading-tight">
+            Experience more together
+          </h1>
+          <p class="text-white text-center font-medium text-lg md:text-2xl">
+            Stay connected with reliable HD meetings<br class="md:hidden" />
+            and unlimited one-on-one <br class="hidden md:block" />
+            and group<br class="md:hidden" />
+            video sessions.
+          </p>
+
+          <button
+            class="bg-purple-600 text-white w-40 h-14 md:h-14 md:w-48 mt-7 font-bold md:text-lg rounded-full"
+          >
+            Download <span class="text-purple-300">v1.3</span>
+          </button>
+        </div>
+      </div>
     </main>
   </body>
 </html>
