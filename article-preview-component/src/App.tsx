@@ -10,7 +10,6 @@ function App() {
         <Article />
       </Container>
 
-
     </>
   )
 }
