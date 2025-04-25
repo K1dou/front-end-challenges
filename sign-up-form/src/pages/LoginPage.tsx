@@ -38,14 +38,7 @@ export default function LoginPage() {
 
         return newErrors;
     }
-    function inputClass(error?: string, touched?: boolean): string {
-        return `
-          w-full p-4 rounded-md border
-          ${error && touched ? "border-red-500 bg-red-50" : "border-gray-300 bg-white"}
-          focus:outline-none focus:ring-2
-          ${error && touched ? "focus:ring-red-500" : "focus:ring-primary-red"}
-        `;
-    }
+
 
     function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
