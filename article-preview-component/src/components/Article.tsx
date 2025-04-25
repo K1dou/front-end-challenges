@@ -9,7 +9,8 @@ export default function Article() {
 
     return (
 
-        <>
+
+        <main>
             <article className="rounded-md flex flex-col shadow-2xl bg-white mt-7 md:flex-row md:max-w-[608px] lg:max-w-[730px]">
 
                 <figure>
@@ -22,7 +23,7 @@ export default function Article() {
 
                 <section className="flex flex-col md:gap-6 mt-8 md:mb-6 px-9 md:px-8 ">
 
-                    <h2 className="text-very-dark-grayish-blue font-extrabold text-[20px] leading-tight">Shift the overall look and feel by adding these wonderful touches to furniture in your home</h2>
+                    <h1 className="text-very-dark-grayish-blue font-extrabold text-[20px] leading-tight">Shift the overall look and feel by adding these wonderful touches to furniture in your home</h1>
                     <p className="font-medium mt-6 md:0 text-desaturated-dark-blue text-[13px]">Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I’ve got some simple tips to help you  make any room feel complete.</p>
 
 
@@ -44,12 +45,14 @@ export default function Article() {
                         </div>
 
                         <button
+                            aria-label="botao share"
                             className={`p-2 rounded-full bg-light-grayish-blue mb-4 md:mb-0 transition-opacity duration-300 ${tooltipvisible ? "opacity-0 pointer-events-none md:opacity-100 md:pointer-events-auto" : "opacity-100"
                                 }`}
                             onClick={() => {
                                 setTooltipVisible(!tooltipvisible);
                                 console.log("teste");
                             }}
+
                         >
                             <IoMdShareAlt className="h-6 w-6 text-desaturated-dark-blue" />
                         </button>
@@ -75,7 +78,7 @@ export default function Article() {
                                 />
                             </div>
 
-                            <button className={` mr-2 p-2 rounded-full bg-desaturated-dark-blue `} onClick={() => {
+                            <button className={` mr-2 p-2 rounded-full bg-desaturated-dark-blue `} aria-label="botao share" onClick={() => {
                                 setTooltipVisible(!tooltipvisible)
                             }}><IoMdShareAlt className={`h-6 w-6 text-white  ${tooltipvisible ? "text-white" : ""}`} /> </button>
 
@@ -116,8 +119,9 @@ export default function Article() {
 
 
             </article >
+        </main>
 
-        </>
+
     )
 
 }
