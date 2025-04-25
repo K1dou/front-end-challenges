@@ -4,6 +4,13 @@ Bem-vindo ao repositório **Front-End Challenges**! Aqui você encontrará uma c
 
 ---
 
+## 🌐 Perfil no Frontend Mentor  
+
+Confira meu perfil no **Frontend Mentor**: [K1dou](https://www.frontendmentor.io/profile/K1dou)  
+Aqui você pode acompanhar os desafios que estou concluindo e avaliando!
+
+---
+
 ## 🧩 Sobre o Repositório  
 
 Este repositório foi criado com o objetivo de:  
