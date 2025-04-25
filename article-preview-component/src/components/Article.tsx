@@ -25,7 +25,6 @@ export default function Article() {
                     <h2 className="text-very-dark-grayish-blue font-extrabold text-[20px] leading-tight">Shift the overall look and feel by adding these wonderful touches to furniture in your home</h2>
                     <p className="font-medium mt-6 md:0 text-desaturated-dark-blue text-[13px]">Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I’ve got some simple tips to help you  make any room feel complete.</p>
 
-                    {/* //PARA CARALHOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO */}
 
 
                     <div className="relative mt-7 md:mt-0 flex justify-between items-center transition-opacity duration-200 
@@ -112,14 +111,8 @@ export default function Article() {
                         </div>
 
 
-
-
-
                     </div>
-
                 </section >
-
-
 
 
             </article >
