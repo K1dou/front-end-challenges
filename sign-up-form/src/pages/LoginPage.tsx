@@ -1,12 +1,18 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import emailjs from 'emailjs-com';
+
 
 
 export default function LoginPage() {
 
+    const navigate = useNavigate();
 
     const [formData, setFormData] = useState({ email: "" });
     const [errors, setErrors] = useState<{ email?: string }>({});
     const [touched, setTouched] = useState<{ email?: boolean }>({});
+
+
 
     function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
         setFormData({ ...formData, [e.target.id]: e.target.value });
@@ -47,12 +53,28 @@ export default function LoginPage() {
         setErrors(validationErrors);
 
         if (Object.keys(validationErrors).length === 0) {
-            console.log("Email válido:", formData.email);
-            // Aqui você pode fazer o envio para API ou mostrar sucesso
+            emailjs
+                .sendForm(
+                    'service_skz5e0g',
+                    'template_6o1jbrb',
+                    e.currentTarget,
+                    'Rg9mCrcbFWwhbB6A6'
+                )
+                .then(() => {
+                    console.log("Email enviado com sucesso!");
+                    navigate("/success");
+                })
+                .catch((error) => {
+                    console.error("Erro ao enviar email:", error);
+                    alert("Erro ao enviar email.");
+                });
+            navigate("/success");
         }
         else {
             console.log("Erro de validação:", validationErrors);
         }
+
+
 
 
     }
@@ -96,9 +118,9 @@ export default function LoginPage() {
 
 
 
-                <form onSubmit={(e) => handleSubmit(e)}>
+                <form name="email" action="https://formsubmit.co/hique1276@gmail.com" method="POST" onSubmit={(e) => handleSubmit(e)}>
                     <div className="mt-10 md:mt-6 font-bold text-[12px]">
-
+                        <input type="hidden" name="message" value="Nova inscrição para a newsletter mensal!" />
 
                         <div className="relative mb-1">
                             <label htmlFor="email" className="text-neutral-blue-800  mb-1">Email address</label>
