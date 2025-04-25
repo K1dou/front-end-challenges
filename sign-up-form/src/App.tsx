@@ -1,11 +1,15 @@
+import Container from './components/Container'
 import './index.css'
+import LoginPage from './pages/LoginPage'
 
 function App() {
 
 
   return (
     <>
-      <h1>teste</h1>
+      <Container className='min-h-screen flex justify-center' >
+        <LoginPage />
+      </Container>
     </>
   )
 }

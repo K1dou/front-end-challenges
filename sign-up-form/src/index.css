@@ -1,1 +1,20 @@
 @import 'tailwindcss';
+
+@theme {
+  --color-primary-red: hsl(4, 100%, 67%);
+
+  --color-neutral-blue-800: hsl(234, 29%, 20%);
+  --color-neutral-blue-700: hsl(235, 18%, 26%);
+  --color-neutral-grey: hsl(0, 0%, 58%);
+  --color-neutral-white: hsl(0, 0%, 100%);
+
+  --font-family-roboto: 'Roboto', sans-serif;
+  --font-size-paragraph: 16px;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-family-roboto);
+    font-size: var(--font-size-paragraph);
+  }
+}
