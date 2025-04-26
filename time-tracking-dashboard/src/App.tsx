@@ -43,9 +43,9 @@ function App() {
         </div>
 
         <div className='lg:flex-col lg:mt-6 lg:ml-8 lg:items-start lg:gap-5  md:justify-center md:gap-33   flex justify-around mt-3 '>
-          <button onClick={() => handlePeriodChange('daily')} className={`cursor-pointer text-Purple-500 ${period === "daily" ? "text-white " : " text-Purple-500"} px-1`}>Daily</button>
-          <button onClick={() => handlePeriodChange('weekly')} className={`cursor-pointer text-Purple-500 px-1  ${period === "weekly" ? "text-white " : " text-Purple-500"}`}>Weekly</button>
-          <button onClick={() => handlePeriodChange('monthly')} className={`cursor-pointer text-Purple-500 ${period === "monthly" ? "text-white " : " text-Purple-500"} px-1`}>Monthly</button>
+          <button aria-label="Button daily" onClick={() => handlePeriodChange('daily')} className={`cursor-pointer text-Purple-500 ${period === "daily" ? "text-white " : " text-Purple-500"} px-1`}>Daily</button>
+          <button aria-label="Button daily" onClick={() => handlePeriodChange('weekly')} className={`cursor-pointer text-Purple-500 px-1  ${period === "weekly" ? "text-white " : " text-Purple-500"}`}>Weekly</button>
+          <button aria-label="Button daily" onClick={() => handlePeriodChange('monthly')} className={`cursor-pointer text-Purple-500 ${period === "monthly" ? "text-white " : " text-Purple-500"} px-1`}>Monthly</button>
 
         </div>
       </div>

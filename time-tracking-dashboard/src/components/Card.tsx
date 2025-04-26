@@ -61,7 +61,7 @@ export default function Card({ type, current, previous }: CardProps) {
 
                 <div className='flex w-full justify-between '>
                     <p className='text-lg text-white '>{cardData[type].type}</p>
-                    <button><img src="/icon-ellipsis.svg" alt="" /></button>
+                    <button aria-label="button options"><img src="/icon-ellipsis.svg" alt="" /></button>
                 </div>
 
                 <div className='md:flex-col md:items-start flex w-full items-center justify-between'>
