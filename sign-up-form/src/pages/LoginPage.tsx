@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import emailjs from 'emailjs-com';
 
@@ -12,6 +12,17 @@ export default function LoginPage() {
     const [formData, setFormData] = useState({ email: "" });
     const [errors, setErrors] = useState<{ email?: string }>({});
     const [touched, setTouched] = useState<{ email?: boolean }>({});
+
+    useEffect(() => {
+        console.log("🚨 VERSÃO ATUAL DO CÓDIGO - DEBUG 001",)
+
+        console.log("ENV:", {
+            service: import.meta.env.VITE_EMAILJS_SERVICE_ID,
+            template: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+            public: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+        });
+
+    }, []);
 
 
 
