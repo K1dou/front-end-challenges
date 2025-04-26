@@ -13,27 +13,9 @@ export default function LoginPage() {
     const [errors, setErrors] = useState<{ email?: string }>({});
     const [touched, setTouched] = useState<{ email?: boolean }>({});
 
-    useEffect(() => {
-        console.log("🚨 VERSÃO ATUAL DO CÓDIGO - DEBUG 001",)
-
-        console.log("ENV:", {
-            service: import.meta.env.VITE_EMAILJS_SERVICE_ID,
-            template: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-            public: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
-        });
-
-    }, []);
-
-
-
     function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
         setFormData({ ...formData, [e.target.id]: e.target.value });
-        console.log("Form data:", formData.email);
-        console.log("ENV:", {
-            service: import.meta.env.VITE_EMAILJS_SERVICE_ID,
-            template: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-            public: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
-        });
+
     }
 
     function handleBlur(e: React.FocusEvent<HTMLInputElement>) {
