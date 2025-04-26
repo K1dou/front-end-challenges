@@ -57,6 +57,11 @@ export default function LoginPage() {
                     navigate("/success");
                 })
                 .catch((error) => {
+                    console.log("ENV:", {
+                        service: import.meta.env.VITE_EMAILJS_SERVICE_ID,
+                        template: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+                        public: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+                    });
                     console.error("Erro ao enviar email:", error);
                     alert("Erro ao enviar email.");
                 });
