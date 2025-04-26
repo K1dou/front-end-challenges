@@ -48,10 +48,10 @@ export default function LoginPage() {
         if (Object.keys(validationErrors).length === 0) {
             emailjs
                 .sendForm(
-                    'service_skz5e0g',
-                    'template_6o1jbrb',
+                    import.meta.env.VITE_EMAILJS_SERVICE_ID,
+                    import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
                     e.currentTarget,
-                    'Rg9mCrcbFWwhbB6A6'
+                    import.meta.env.VITE_EMAILJS_PUBLIC_KEY
                 )
                 .then(() => {
                     console.log("Email enviado com sucesso!");
@@ -83,7 +83,7 @@ export default function LoginPage() {
                     <source srcSet="/illustration-sign-up-desktop.svg" media="(min-width: 1024px)" />
 
 
-                    <img className="w-screen md:rounded-t-3xl lg:h-full  lg:w-[400px]" src="/illustration-sign-up-mobile.svg" alt="" />
+                    <img className="w-screen  md:rounded-t-3xl lg:h-full  lg:w-[400px]" src="/illustration-sign-up-mobile.svg" alt="" />
                 </picture>
             </figure>
 
