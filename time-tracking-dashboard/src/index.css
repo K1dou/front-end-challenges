@@ -1,1 +1,25 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+@theme {
+  --color-Purple-600: hsl(246, 80%, 60%);
+  --color-Orange-300: hsl(15, 100%, 70%);
+  --color-Pink-400: hsl(348, 100%, 68%);
+  --color-Green-400: hsl(145, 58%, 55%);
+  --color-Purple-700: hsl(264, 64%, 52%);
+  --color-Yellow-300: hsl(43, 84%, 65%);
+  --color-Navy-950: hsl(226, 43%, 10%);
+  --color-Navy-900: hsl(235, 46%, 20%);
+  --color-Purple-500: hsl(235, 45%, 61%);
+  --color-Navy-200: hsl(236, 100%, 87%);
+  --color-Blue-300: hsl(195, 74%, 62%);
+
+  --font-family-rubik: 'Rubik', sans-serif;
+  --font-size-paragraph: 18px;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-family-rubik);
+    font-size: var(--font-size-paragraph);
+  }
+}
