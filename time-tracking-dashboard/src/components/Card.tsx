@@ -4,7 +4,6 @@ interface CardProps {
     type: keyof typeof cardData;
     current: number;
     previous: number;
-
 }
 
 const cardData = {
@@ -52,7 +51,7 @@ export default function Card({ type, current, previous }: CardProps) {
                 src={cardData[type].image}
                 alt=""
                 className="absolute right-4 top-[-12px] z-10"
-                style={{ clipPath: "inset(12px 0 0 0)" }} // 👈 só corta o topo
+                style={{ clipPath: "inset(12px 0 0 0)" }}
             />
 
 
@@ -68,7 +67,7 @@ export default function Card({ type, current, previous }: CardProps) {
                 <div className='md:flex-col md:items-start flex w-full items-center justify-between'>
                     <p
                         style={{
-                            fontSize: "clamp(32px, 8vw, 53px)", // você pode ajustar aqui
+                            fontSize: "clamp(32px, 8vw, 53px)",
                         }}
                         className="text-white font-light leading-tight max-w-full"
                     >

@@ -60,7 +60,6 @@ function App() {
           type={titleToTypeMap[item.title]}
           current={item.timeframes[period].current}
           previous={item.timeframes[period].previous}
-          label={period === 'daily' ? 'Yesterday' : period === 'weekly' ? 'Last Week' : 'Last Month'}
         />
       ))}
 
