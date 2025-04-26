@@ -61,7 +61,7 @@ export default function LoginPage() {
                     console.error("Erro ao enviar email:", error);
                     alert("Erro ao enviar email.");
                 });
-            navigate("/success");
+            navigate("/success", { state: { email: formData.email } });
         }
         else {
             console.log("Erro de validação:", validationErrors);
@@ -77,15 +77,15 @@ export default function LoginPage() {
 
         <main className="lg:flex lg:flex-row-reverse lg:gap-16 md:h-[925px] md:w-[608px] lg:h-[640px] lg:w-[904px] md:bg-white md:py-10 md:px-10 md:rounded-3xl">
 
-            <figure
-            >
-                <picture>
-                    <source srcSet="/illustration-sign-up-desktop.svg" media="(min-width: 1024px)" />
 
 
-                    <img className="w-screen  md:rounded-t-3xl lg:h-full  lg:w-[400px]" src="/illustration-sign-up-mobile.svg" alt="" />
-                </picture>
-            </figure>
+            <picture>
+                <source srcSet="/illustration-sign-up-desktop.svg" media="(min-width: 1024px)" />
+
+
+                <img className="w-screen  md:rounded-t-3xl lg:h-full  lg:w-[400px]" src="/illustration-sign-up-mobile.svg" alt="" />
+            </picture>
+
 
             <article className="mt-10 px-6 lg:pr-6 lg:pl-0  ">
 
@@ -111,7 +111,7 @@ export default function LoginPage() {
 
 
 
-                <form name="email" action="https://formsubmit.co/hique1276@gmail.com" method="POST" onSubmit={(e) => handleSubmit(e)}>
+                <form onSubmit={(e) => handleSubmit(e)}>
                     <div className="mt-10 md:mt-6 font-bold text-[12px]">
                         <input type="hidden" name="message" value="Nova inscrição para a newsletter mensal!" />
 
@@ -124,7 +124,7 @@ export default function LoginPage() {
                             </>)}
                         </div>
 
-                        <input onBlur={handleBlur} onChange={(e) => handleChange(e)} id="email" placeholder="email@company.com" className={`focus:outline-none pl-6 text-[16px] font-normal text-neutral-blue-800 placeholder:text-neutral-grey placeholder:text-[16px] placeholder:font-normal placeholder:pl-6 border  h-14 w-full rounded-lg ${errors.email ? "bg-[#FFE7E6] border-primary-red text-primary-red" : "bg-white text-neutral-blue-800"}`} ></input>
+                        <input onBlur={handleBlur} onChange={(e) => handleChange(e)} name="email" id="email" placeholder="email@company.com" className={`focus:outline-none pl-6 text-[16px] font-normal text-neutral-blue-800 placeholder:text-neutral-grey placeholder:text-[16px] placeholder:font-normal placeholder:pl-6 border  h-14 w-full rounded-lg ${errors.email ? "bg-[#FFE7E6] border-primary-red text-primary-red" : "bg-white text-neutral-blue-800"}`} ></input>
 
                         <button type="submit" className="lg:hover:bg-gradient-to-r from-[#FF6A3A] to-[#FF527B] text-white text-[16px] font-bold bg-neutral-blue-800 h-14 w-full rounded-lg mt-6">Subscribe to monthly newsletter</button>
                     </div>
