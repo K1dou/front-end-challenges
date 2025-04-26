@@ -46,21 +46,34 @@ export default function Card({ type, current, previous, label }: CardProps) {
 
 
     return (
-        <div className={`md:w-[188px] md:h-[209px] relative  flex flex-col justify-end overflow-hidden   rounded-2xl h-[160px] w-[327px] ${cardData[type].bgColor} `}>
+        <div className={`pai lg:w-[255px] lg:h-full  md:w-[188px] md:h-[209px] relative z-0  flex flex-col justify-end 	 rounded-b-3xl  rounded-t-2xl h-[160px] w-[327px] ${cardData[type].bgColor} `}>
 
-            <img className=' absolute right-0 -top-2 mr-4 ' src={cardData[type].image} alt="" />
+            <img
+                src={cardData[type].image}
+                alt=""
+                className="absolute right-4 top-[-12px] z-10"
+                style={{ clipPath: "inset(12px 0 0 0)" }} // 👈 só corta o topo
+            />
 
-            <div className='flex flex-col items-center z-10 px-6 bg-Navy-900 justify-center  rounded-t-2xl py-4   '>
+
+
+
+            <div className='filho lg:hover:bg-Purple-500 lg:hover:transition z-40 flex lg:h-[83%] flex-col items-center  px-6 bg-Navy-900 justify-center  rounded-2xl py-4   '>
 
                 <div className='flex w-full justify-between '>
-
-
                     <p className='text-lg text-white '>{cardData[type].type}</p>
                     <button><img src="/icon-ellipsis.svg" alt="" /></button>
                 </div>
 
                 <div className='md:flex-col md:items-start flex w-full items-center justify-between'>
-                    <p className='md:text-[56px] text-[32px] text-white font-light'>{current}hrs</p>
+                    <p
+                        style={{
+                            fontSize: "clamp(32px, 8vw, 53px)", // você pode ajustar aqui
+                        }}
+                        className="text-white font-light leading-tight max-w-full"
+                    >
+                        {current}hrs
+                    </p>
                     <p className='text-Navy-200 text-[15px]'>Last Week - {previous}hrs</p>
 
                 </div>
