@@ -54,7 +54,7 @@ export default function LoginPage() {
                 )
                 .then(() => {
                     console.log("Email enviado com sucesso!");
-                    navigate("/success");
+
                 })
                 .catch((error) => {
                     console.log("ENV:", {
@@ -128,7 +128,7 @@ export default function LoginPage() {
                             </>)}
                         </div>
 
-                        <input onBlur={handleBlur} onChange={(e) => handleChange(e)} name="email" id="email" placeholder="email@company.com" className={`focus:outline-none pl-6 text-[16px] font-normal text-neutral-blue-800 placeholder:text-neutral-grey placeholder:text-[16px] placeholder:font-normal placeholder:pl-6 border  h-14 w-full rounded-lg ${errors.email ? "bg-[#FFE7E6] border-primary-red text-primary-red" : "bg-white text-neutral-blue-800"}`} ></input>
+                        <input onBlur={handleBlur} onChange={(e) => handleChange(e)} value={formData.email} name="email" id="email" placeholder="email@company.com" className={`focus:outline-none pl-6 text-[16px] font-normal text-neutral-blue-800 placeholder:text-neutral-grey placeholder:text-[16px] placeholder:font-normal placeholder:pl-6 border  h-14 w-full rounded-lg ${errors.email ? "bg-[#FFE7E6] border-primary-red text-primary-red" : "bg-white text-neutral-blue-800"}`} ></input>
 
                         <button type="submit" className="lg:hover:bg-gradient-to-r from-[#FF6A3A] to-[#FF527B] text-white text-[16px] font-bold bg-neutral-blue-800 h-14 w-full rounded-lg mt-6">Subscribe to monthly newsletter</button>
                     </div>
