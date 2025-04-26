@@ -4,7 +4,7 @@ interface CardProps {
     type: keyof typeof cardData;
     current: number;
     previous: number;
-    label: string;
+
 }
 
 const cardData = {
@@ -39,7 +39,7 @@ const cardData = {
         type: "Self Care",
     },
 } as const;
-export default function Card({ type, current, previous, label }: CardProps) {
+export default function Card({ type, current, previous }: CardProps) {
 
 
 
