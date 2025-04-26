@@ -18,6 +18,11 @@ export default function LoginPage() {
     function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
         setFormData({ ...formData, [e.target.id]: e.target.value });
         console.log("Form data:", formData.email);
+        console.log("ENV:", {
+            service: import.meta.env.VITE_EMAILJS_SERVICE_ID,
+            template: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+            public: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+        });
     }
 
     function handleBlur(e: React.FocusEvent<HTMLInputElement>) {
@@ -57,11 +62,7 @@ export default function LoginPage() {
 
                 })
                 .catch((error) => {
-                    console.log("ENV:", {
-                        service: import.meta.env.VITE_EMAILJS_SERVICE_ID,
-                        template: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-                        public: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
-                    });
+
                     console.error("Erro ao enviar email:", error);
                     alert("Erro ao enviar email.");
                 });
