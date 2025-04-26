@@ -1,7 +1,10 @@
 
-interface CardProps {
 
+interface CardProps {
     type: keyof typeof cardData;
+    current: number;
+    previous: number;
+    label: string;
 }
 
 const cardData = {
@@ -36,11 +39,16 @@ const cardData = {
         type: "Self Care",
     },
 } as const;
-export default function Card({ type }: CardProps) {
-    return (
-        <div className={`card relative  flex flex-col justify-end overflow-hidden   rounded-2xl h-[160px] w-[327px] ${cardData[type].bgColor} `}>
+export default function Card({ type, current, previous, label }: CardProps) {
 
-            <img className='absolute right-0 -top-2 mr-4 ' src={cardData[type].image} alt="" />
+
+
+
+
+    return (
+        <div className={`md:w-[188px] md:h-[209px] relative  flex flex-col justify-end overflow-hidden   rounded-2xl h-[160px] w-[327px] ${cardData[type].bgColor} `}>
+
+            <img className=' absolute right-0 -top-2 mr-4 ' src={cardData[type].image} alt="" />
 
             <div className='flex flex-col items-center z-10 px-6 bg-Navy-900 justify-center  rounded-t-2xl py-4   '>
 
@@ -51,9 +59,9 @@ export default function Card({ type }: CardProps) {
                     <button><img src="/icon-ellipsis.svg" alt="" /></button>
                 </div>
 
-                <div className='flex w-full items-center justify-between'>
-                    <p className='text-[32px] text-white font-light'>32hrs</p>
-                    <p className='text-Navy-200 text-[15px]'>Last Week - 36hrs</p>
+                <div className='md:flex-col md:items-start flex w-full items-center justify-between'>
+                    <p className='md:text-[56px] text-[32px] text-white font-light'>{current}hrs</p>
+                    <p className='text-Navy-200 text-[15px]'>Last Week - {previous}hrs</p>
 
                 </div>
 
