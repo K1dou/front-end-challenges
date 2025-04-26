@@ -6,6 +6,7 @@ import emailjs from 'emailjs-com';
 
 export default function LoginPage() {
 
+
     const navigate = useNavigate();
 
     const [formData, setFormData] = useState({ email: "" });
@@ -22,8 +23,6 @@ export default function LoginPage() {
     function handleBlur(e: React.FocusEvent<HTMLInputElement>) {
         const { name } = e.target;
         setTouched({ ...touched, [name]: true });
-
-
 
     }
 
